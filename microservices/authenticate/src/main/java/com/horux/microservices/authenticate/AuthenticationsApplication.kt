@@ -1,11 +1,11 @@
-package com.horux.korux
+package com.horux.microservices.authenticate
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class KoruxApplication
+class AuthenticationsApplication
 
 fun main(args: Array<String>) {
-    runApplication<KoruxApplication>(*args)
+	runApplication<AuthenticationsApplication>(*args)
 }

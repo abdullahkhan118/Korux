@@ -1,11 +1,14 @@
 plugins {
-    id("org.springframework.boot") version "3.1.5"
+    id("java")
+    id("org.springframework.boot")
     id("io.spring.dependency-management")
     kotlin("jvm")
     kotlin("plugin.spring")
+    kotlin("kapt")
+    kotlin("plugin.jpa")
 }
 
-group = "com.horux"
+group = "com.horux.microservices.profiles"
 version = "0.0.1-SNAPSHOT"
 
 repositories {
@@ -13,11 +16,7 @@ repositories {
 }
 
 dependencies {
-
-    implementation("org.springframework.boot:spring-boot-starter-web")
-
-    implementation(project(":database_management"))
-
+    api(project(":microservices:entities"))
 }
 
 tasks.test {
