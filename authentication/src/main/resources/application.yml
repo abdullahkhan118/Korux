@@ -1,0 +1,24 @@
+server:
+  port: 8081
+
+spring:
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          issuer-uri: https://idp.example.com/issuer
+#          jws-algorithm: RS512
+#          jwk-set-uri: https://idp.example.org/.well-known/jwks.json
+
+  datasource:
+    username: postgres
+    password: postgres
+    url: jdbc:postgresql://localhost:5432/socialMedia
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
